@@ -40,7 +40,11 @@
         ds.Tables(11).TableName = "Categories"
 
         Dim thePath As String = "C:\Users\Peter\Desktop\testtheodf.odf"
+        Dim thePathExcel As String = "C:\Users\Peter\Desktop\testtheodf.xls"
         Dim theSpread As New OdsReaderWriter
         theSpread.WriteOdsFile(ds, thePath)
+
+        Dim excel As New ExcelXlsWriter
+        excel.WriteXls(ds, thePathExcel)
     End Sub
 End Class
